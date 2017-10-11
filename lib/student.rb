@@ -1,3 +1,4 @@
+require 'pry'
 class Student
 
   attr_accessor :name, :grade
@@ -27,6 +28,7 @@ class Student
   end
 
   def save
+    binding.pry
     sql = <<-SQL
     INSERT INTO students (name, grade)
     VALUES (?, ?)
